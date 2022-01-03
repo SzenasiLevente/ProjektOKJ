@@ -1,0 +1,14 @@
+.indexinput {
+    background-color: lightgrey;
+    margin: 3px 0;
+    border-radius: 10px !important;
+}
+
+a:link {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
