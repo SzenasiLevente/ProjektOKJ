@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="hu">
   <head>
@@ -11,26 +10,32 @@
     <link rel="stylesheet" href="CSS/boot.css">
     <link rel="stylesheet" href="CSS/own.css">
   </head>
-  <body>
-    
+
+  <body>  
+
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+
   <a class="navbar-brand col-md-3 col-lg-2 px-3 py-3" href="#">Site final name</a>
+
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
- 
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <div class="container">        
-    <form class="d-flex" method="POST">      
-    <a href="register.php" class="my-auto me-2">Don't have an account? Create one.</a>
+
+  <div class="container-fluid"> 
+  <ul class="navbar-navme ms-auto my-auto">
+          <li class="nav-item"><a href="register.php" class="nav-link active">Don't have an account? Create one.</a></li>
+    </ul> 
+
+  <div class="navbar-nav nav-item">     
+    <form class="d-flex" method="POST">    
         <input class="form-control me-2 indexinput" type="text" placeholder="Felhasználónév" name="inUsername">
         <input class="form-control me-2 indexinput" type="password" placeholder="Jelszó" name="inPass">
         <button class="btn indexinput" type="submit" name="submit">Bejelentkezés</button>
-     </form>
-     </div>
+    </form>
+
     </div>
   </div>
+
 </header>
 
 <div class="container-fluid">
@@ -57,7 +62,6 @@
             </a>
           </li>
         </ul>
-
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
           <span>placeholder</span>
           <a class="link-secondary" href="#" aria-label="Add a new report">
@@ -87,15 +91,19 @@
         </ul>
       </div>
     </nav>
-
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h1 text-white">Dashboard</h1>
+        <h1 class="h1 text-white">General title about games here</h1>
       </div>
+
+      <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+        <p>General info about games here</p>
+      </div>
+
     </main>
   </div>
 </div>
-
 
   </body>
 </html>

@@ -12,3 +12,7 @@ a:link {
 a:hover {
     text-decoration: underline;
 }
+
+.fontavg {
+    font-size: 1.5rem;
+}
