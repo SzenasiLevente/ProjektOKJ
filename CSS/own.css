@@ -13,6 +13,10 @@ a:hover {
     text-decoration: underline;
 }
 
+a:active {
+    color: white;
+}
+
 .fontavg {
     font-size: 1.5rem;
 }
