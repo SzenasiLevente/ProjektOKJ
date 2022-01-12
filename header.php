@@ -25,7 +25,7 @@
     </ul> 
 
   <div class="navbar-nav nav-item">     
-    <form class="d-flex" method="POST">    
+    <form class="d-flex" method="POST" action="inc/inc_login.php">    
         <input class="form-control me-2 indexinput" type="text" placeholder="Username" name="inUsername">
         <input class="form-control me-2 indexinput" type="password" placeholder="Password" name="inPass">
         <button class="btn indexinput" type="submit" name="submit">Login</button>
