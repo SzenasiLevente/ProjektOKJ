@@ -28,14 +28,18 @@ require "header.php"
                   <label class="form-label" for="userEmail">E-mail</label>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <input type="password" id="userPassword" name="userPassword" class="form-control form-control-lg indexinput"/>
-                  <label class="form-label" for="userPassword">Password</label>
-                </div>
+                <div class="form-row">
 
-                <div class="form-outline mb-4">
-                  <input type="password" id="userPasswordConfirm" name="userPasswordConfirm" class="form-control form-control-lg indexinput"/>
-                  <label class="form-label" for="userPasswordConfirm">Confirm password</label>
+                <div class="form-group col-md-6">
+                  <input type="password" id="userPassword" name="userPassword" class="form-control form-control-lg indexinput"/>
+                  <label class="form-label" for="userPassword">Password</label>  
+                  </div>
+
+                  <div class="form-group col-md-6">
+                  <input type="password" id="userPasswordConfirm" name="userPasswordConfirm" class="form-control form-control-lg indexinput"/>         
+                <label class="form-label" for="userPasswordConfirm">Confirm password</label>
+                </div>
+                
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
@@ -52,7 +56,7 @@ require "header.php"
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="submit" id="submit" name="submit" class="btn btn-block btn-lg gradient-custom-4 indexinput">Register</button>
+                  <button type="submit" id="submit" name="submit" class="btn btn-block btn-lg gradient-custom-4 btn-light">Register</button>
                 </div>
               </form>
 
