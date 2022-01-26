@@ -6,9 +6,17 @@
       </div>
 
       <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-6">
         <p>General info about games here</p>
+        </div>
+        <div class="col-lg-6">
+        <p>General info about games here</p>
+        </div>
+        </div>
       </div>
-
+      </div>
     </main>
 
 <?php require 'footer.php'; ?>

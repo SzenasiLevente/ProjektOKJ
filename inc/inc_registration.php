@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $userEmail = mysqli_real_escape_string($connection, $_POST['userEmail']);
     $userAccept = mysqli_real_escape_string($connection, $_POST['userAccept']);
 
-    if (empty($userName) ||empty($userPassword) ||empty($userPasswordConfirm) || empty($userEmail) || empty($userAccept)) {
+    if (empty($userName) ||empty($userPassword) ||empty($userPasswordConfirm) || empty($userEmail)) {
         header("Location: ../registration.php?error=emptyFields");
     }
     else if (filter_var($userEmail, FILTER_VALIDATE_EMAIL) == false) {
