@@ -64,6 +64,10 @@ session_start();
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Selection of freeware
+              </a>
               <a class="nav-link" aria-current="page" href="#">
                 <span data-feather="home"></span>
                 Game 1
