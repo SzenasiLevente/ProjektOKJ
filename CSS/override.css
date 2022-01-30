@@ -118,7 +118,6 @@ body {
 }
 
 .index-input {
-    background-color: lightgrey;
     margin: 3px 0;
     border-radius: 10px !important;
 }
@@ -148,4 +147,14 @@ img {
 .align-justified {
     text-align: justify;
     text-justify: inter-word;
+}
+
+.carousel .item {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.carousel-control {
+    border-radius: 10px;
 }
