@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Jan 23. 12:52
+-- Létrehozás ideje: 2022. Jan 31. 10:57
 -- Kiszolgáló verziója: 10.4.14-MariaDB
 -- PHP verzió: 7.4.10
 
@@ -43,7 +43,24 @@ CREATE TABLE `ahighscores` (
 CREATE TABLE `games` (
   `gameId` int(11) NOT NULL,
   `gameName` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
-  `gameType` varchar(255) COLLATE utf8_hungarian_ci NOT NULL
+  `gameType` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
+  `gamePic` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `minrequirements`
+--
+
+CREATE TABLE `minrequirements` (
+  `minId` int(11) NOT NULL,
+  `minGId` int(11) NOT NULL,
+  `minOS` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `minProcessor` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `minMemory` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `minGPU` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `minStorage` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
@@ -69,6 +86,22 @@ CREATE TABLE `owngames` (
   `ownId` int(11) NOT NULL,
   `ownUId` int(11) NOT NULL,
   `ownGId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `recrequirements`
+--
+
+CREATE TABLE `recrequirements` (
+  `recId` int(11) NOT NULL,
+  `recGId` int(11) NOT NULL,
+  `recOS` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `recProcessor` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `recMemory` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `recGPU` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `recStorage` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
@@ -113,6 +146,13 @@ ALTER TABLE `games`
   ADD PRIMARY KEY (`gameId`);
 
 --
+-- A tábla indexei `minrequirements`
+--
+ALTER TABLE `minrequirements`
+  ADD PRIMARY KEY (`minId`),
+  ADD KEY `minGId` (`minGId`);
+
+--
 -- A tábla indexei `nhighscores`
 --
 ALTER TABLE `nhighscores`
@@ -127,6 +167,13 @@ ALTER TABLE `owngames`
   ADD PRIMARY KEY (`ownId`),
   ADD KEY `ownUId` (`ownUId`),
   ADD KEY `ownGId` (`ownGId`);
+
+--
+-- A tábla indexei `recrequirements`
+--
+ALTER TABLE `recrequirements`
+  ADD PRIMARY KEY (`recId`),
+  ADD KEY `recGId` (`recGId`);
 
 --
 -- A tábla indexei `users`
@@ -151,6 +198,12 @@ ALTER TABLE `games`
   MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT a táblához `minrequirements`
+--
+ALTER TABLE `minrequirements`
+  MODIFY `minId` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT a táblához `nhighscores`
 --
 ALTER TABLE `nhighscores`
@@ -161,6 +214,12 @@ ALTER TABLE `nhighscores`
 --
 ALTER TABLE `owngames`
   MODIFY `ownId` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT a táblához `recrequirements`
+--
+ALTER TABLE `recrequirements`
+  MODIFY `recId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT a táblához `users`
@@ -180,6 +239,12 @@ ALTER TABLE `ahighscores`
   ADD CONSTRAINT `ahighscores_ibfk_2` FOREIGN KEY (`aGId`) REFERENCES `games` (`gameId`);
 
 --
+-- Megkötések a táblához `minrequirements`
+--
+ALTER TABLE `minrequirements`
+  ADD CONSTRAINT `minrequirements_ibfk_1` FOREIGN KEY (`minGId`) REFERENCES `games` (`gameId`);
+
+--
 -- Megkötések a táblához `nhighscores`
 --
 ALTER TABLE `nhighscores`
@@ -192,6 +257,12 @@ ALTER TABLE `nhighscores`
 ALTER TABLE `owngames`
   ADD CONSTRAINT `owngames_ibfk_1` FOREIGN KEY (`ownUId`) REFERENCES `users` (`userId`),
   ADD CONSTRAINT `owngames_ibfk_2` FOREIGN KEY (`ownGId`) REFERENCES `games` (`gameId`);
+
+--
+-- Megkötések a táblához `recrequirements`
+--
+ALTER TABLE `recrequirements`
+  ADD CONSTRAINT `recrequirements_ibfk_1` FOREIGN KEY (`recGId`) REFERENCES `games` (`gameId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

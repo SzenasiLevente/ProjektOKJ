@@ -35,7 +35,7 @@ session_start();
                   </ul>       
                   <div class="nav-item">   
                          <form class="d-flex" method="POST" action="inc/inc_logout.php">
-                            <button class="btn index-input" type="submit" name="submit">Logout</button>
+                            <button class="btn header-button" type="submit" name="submit">Logout</button>
                           </form>
                   </div>';
     } else {
@@ -47,7 +47,7 @@ session_start();
                     <form class="d-flex" method="POST" action="inc/inc_login.php">    
                       <input class="form-control me-2 index-input" type="text" placeholder="Username" name="inUsername">
                       <input class="form-control me-2 index-input" type="password" placeholder="Password" name="inPass">
-                      <button class="btn index-input" type="submit" name="submit">Login</button>
+                      <button class="btn header-button" type="submit" name="submit">Login</button>
                     </form>
                 </div>';
     }

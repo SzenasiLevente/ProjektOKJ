@@ -122,6 +122,12 @@ body {
     border-radius: 10px !important;
 }
 
+.header-button {
+    margin: 3px 0;
+    border-radius: 10px !important;
+    background-color: grey;
+}
+
 a,
 a:link {
     color: white;
