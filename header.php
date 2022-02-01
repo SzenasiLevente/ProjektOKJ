@@ -70,19 +70,19 @@ session_start();
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
-              <a class="nav-link" aria-current="page" href="#">
+              <a class="nav-link" aria-current="page" href="gameone.php">
                 <span data-feather="home"></span>
                 Game 1
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="gametwo.php">
                 <span data-feather="bar-chart-2"></span>
                 Game 2
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="gamethree.php">
                 <span data-feather="layers"></span>
                 Game 3
               </a>
