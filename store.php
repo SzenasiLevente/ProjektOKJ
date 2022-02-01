@@ -21,7 +21,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-        <a href="index.php">
+        <a href="gameone.php">
       <img src="IMG/gameone.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Game one</h5>
@@ -30,18 +30,22 @@
         </a>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
+    <a href="gametwo.php">
       <img src="IMG/gametwo.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Game two</h5>
         <p>Very cool adventure game.</p>
       </div>
+      </a>
     </div>
     <div class="carousel-item">
+    <a href="gamethree.php">
       <img src="IMG/gamethree.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Game three</h5>
         <p>Very awesome strategy game.</p>
       </div>
+      </a>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
