@@ -2,18 +2,22 @@
 require "header.php" 
 ?>
 
-<main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
-
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h1 text-white">Registration</h1>
+        <h1 class="h1 text-white ">Home</h1>
       </div>
 
-
+      <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+        
       <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-          <div class="card bg-dark text-white" style="border-radius: 10px;">
+          <div class="card bg-dark text-white my-4" style="border-radius: 10px;">
             <div class="card-body p-5">
 
               <form action="inc/inc_registration.php" method="post">
@@ -64,7 +68,12 @@ require "header.php"
   </div>
 
       </div>    
-</main>
-
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+        </div>
+      </div>
+      </div>
+    </main>
 
 <?php require "footer.php" ?>
