@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Jan 31. 10:57
--- Kiszolgáló verziója: 10.4.14-MariaDB
--- PHP verzió: 7.4.10
+-- Gép: 127.0.0.1:3307
+-- Létrehozás ideje: 2022. Feb 02. 09:19
+-- Kiszolgáló verziója: 10.4.6-MariaDB
+-- PHP verzió: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -46,6 +47,15 @@ CREATE TABLE `games` (
   `gameType` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `gamePic` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `games`
+--
+
+INSERT INTO `games` (`gameId`, `gameName`, `gameType`, `gamePic`) VALUES
+(1, 'Call of Battlefield', 'action', 'gameone.png'),
+(2, 'Legend of Zrolda', 'adventure', 'gametwo.png'),
+(3, 'Ratman', 'arcade', 'gamethree.png');
 
 -- --------------------------------------------------------
 
@@ -125,7 +135,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`, `userPicture`, `userAdmin`) VALUES
 (1, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com', NULL, b'0'),
-(2, 'test1', '5a105e8b9d40e1329780d62ea2265d8a', 'test1@test.com', NULL, b'0');
+(2, 'test1', '5a105e8b9d40e1329780d62ea2265d8a', 'test1@test.com', NULL, b'0'),
+(3, 'godo', 'e8b554a5700433e00c24dc9df0b079de', 'godo@istvan.com', NULL, b'0');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -195,7 +206,7 @@ ALTER TABLE `ahighscores`
 -- AUTO_INCREMENT a táblához `games`
 --
 ALTER TABLE `games`
-  MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT a táblához `minrequirements`
@@ -225,7 +236,7 @@ ALTER TABLE `recrequirements`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Megkötések a kiírt táblákhoz
