@@ -1,4 +1,7 @@
-<?php require 'header.php'; ?>
+<?php require 'header.php'; 
+$sqlgame = "SELECT * FROM `games`;";
+$resultgame = mysqli_query($connection, $sqlgame);
+?>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -18,35 +21,33 @@
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
+      <img src="IMG/store.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>The Store</h5>
+        <p>Get all of your games here.</p>
+      </div>
+    </div>
+    <?php
+      while ($row = mysqli_fetch_assoc($resultgame)){
+        echo '
+        <div class="carousel-item">
         <a href="gameone.php">
-      <img src="IMG/gameone.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Game one</h5>
-        <p>Very epic action game.</p>
-      </div>
+          <img src="IMG/'.$row["gamePic"].'" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          <h5>'.$row["gameName"].'</h5>
+          <p>Very epic '.$row["gameType"].' game.</p>
+        </div>
         </a>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-    <a href="gametwo.php">
-      <img src="IMG/gametwo.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Game two</h5>
-        <p>Very cool adventure game.</p>
-      </div>
-      </a>
-    </div>
-    <div class="carousel-item">
-    <a href="gamethree.php">
-      <img src="IMG/gamethree.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Game three</h5>
-        <p>Very awesome strategy game.</p>
-      </div>
-      </a>
-    </div>
+        </div>
+        ';        
+      }
+    ?>
+    
+
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

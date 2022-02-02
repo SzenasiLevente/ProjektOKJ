@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'inc/inc_connection.php';
 ?>
 
 <!doctype html>
