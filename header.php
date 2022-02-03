@@ -13,7 +13,8 @@ require 'inc/inc_connection.php';
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  
   <link rel="stylesheet" href="CSS/override.css">
 
 </head>
@@ -64,23 +65,26 @@ require 'inc/inc_connection.php';
             <li class="nav-item">
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Games</span>
-            <a class="link-secondary" href="#" aria-label="Add a new report">
+            <a class="link-secondary" href="#">
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
               <a class="nav-link" aria-current="page" href="gameone.php">
+              <i class="bi bi-controller"></i>
                 <span data-feather="home"></span>
                 Game 1
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="gametwo.php">
+              <i class="bi bi-controller"></i>
                 <span data-feather="bar-chart-2"></span>
                 Game 2
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="gamethree.php">
+              <i class="bi bi-controller"></i>
                 <span data-feather="layers"></span>
                 Game 3
               </a>
@@ -94,12 +98,14 @@ require 'inc/inc_connection.php';
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
               <a class="nav-link" href="store.php">
+              <i class="bi bi-joystick"></i>
                 <span data-feather="file-text"></span>
                 Selection of freeware
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="profile.php">
+              <i class="bi bi-person-circle"></i>
                 <span data-feather="file-text"></span>
                 Profile
               </a>
@@ -107,6 +113,7 @@ require 'inc/inc_connection.php';
             </li>
             <li class="nav-item">
               <a class="nav-link" href="aboutus.php">
+              <i class="bi bi-mouse2"></i>
                 <span data-feather="file-text"></span>
                 About us
               </a>
