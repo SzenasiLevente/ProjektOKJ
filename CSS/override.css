@@ -130,7 +130,7 @@ body {
 
 a,
 a:link {
-    color: white;
+    color: grey;
     text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ a:hover {
 
 a:visited,
 a:active {
-    color: grey;
+    color: white;
 }
 
 img {
