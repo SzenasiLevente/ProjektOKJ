@@ -35,18 +35,18 @@ $resultgame = mysqli_query($connection, $sqlgame);
       while ($row = mysqli_fetch_assoc($resultgame)){
         echo '
         <div class="carousel-item">
-        <a href="gameone.php">
-          <img src="IMG/'.$row["gamePic"].'" class="d-block w-100" alt="...">
+        <form action="game.php" method="POST">
+        <input href="game.php" type="image" src="IMG/'.$row["gamePic"].'" class="d-block w-100" name="submit">
+        <input type="hidden" value="'.$row["gameName"].'">
+        </form>
           <div class="carousel-caption d-none d-md-block">
           <h5>'.$row["gameName"].'</h5>
           <p>Very epic '.$row["gameType"].' game.</p>
         </div>
-        </a>
         </div>
         ';        
       }
     ?>
-    
 
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
