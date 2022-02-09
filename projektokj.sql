@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3307
--- Létrehozás ideje: 2022. Feb 09. 08:58
+-- Létrehozás ideje: 2022. Feb 09. 12:03
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -123,6 +123,15 @@ CREATE TABLE `recrequirements` (
   `recStorage` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `recrequirements`
+--
+
+INSERT INTO `recrequirements` (`recId`, `recGId`, `recOS`, `recProcessor`, `recMemory`, `recGPU`, `recStorage`) VALUES
+(1, 1, '64-bit Windows 10', 'Intel Core i7 4790 | AMD Ryzen 7 2700X', '16', 'GeForce RTX 3060 | Radeon RX 6600 XT', '100 GB'),
+(2, 2, '64-bit Windows 7', 'Core i5-6400 | Ryzen 3 1200', '6', 'GeForce GTX 1060 6 GB | Radeon RX 470', '5 GB'),
+(3, 3, '64-bit Windows 7', '2.69 Ghz Processor', '8', 'Intel HD Graphics 3000', '1500 MB');
+
 -- --------------------------------------------------------
 
 --
@@ -239,7 +248,7 @@ ALTER TABLE `owngames`
 -- AUTO_INCREMENT a táblához `recrequirements`
 --
 ALTER TABLE `recrequirements`
-  MODIFY `recId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `recId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT a táblához `users`
