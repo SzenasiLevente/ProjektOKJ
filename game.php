@@ -3,6 +3,18 @@ require 'header.php';
 $gamename = $_POST['gamehidden'];
 $sqlpic = 'SELECT * FROM `games` WHERE `gameName` = "'.$gamename.'"';
 $resultpic = mysqli_query($connection, $sqlpic);
+
+$minreqsql = 'SELECT `minrequirements`.*
+FROM `games`
+    LEFT JOIN `minrequirements` ON `minrequirements`.`minGId` = `games`.`gameId`
+WHERE `games`.`gameName` = "'.$gamename.'"';
+$minreqresult = mysqli_query($connection, $minreqsql);
+
+$recreqsql = 'SELECT `recrequirements`.*
+FROM `games`
+    LEFT JOIN `recrequirements` ON `recrequirements`.`recGId` = `games`.`gameId`
+WHERE `games`.`gameName` = "'.$gamename.'"';
+$recreqresult = mysqli_query($connection, $recreqsql);
 ?>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -14,8 +26,40 @@ $resultpic = mysqli_query($connection, $sqlpic);
       <div class="container-fluid">
         <div class="row">
         <div class="col-lg-6">
-        <h3>System requirements</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda porro amet corporis explicabo expedita soluta commodi repellat sequi ipsum nulla, atque alias tempore sed ratione illo exercitationem accusamus qui eaque vitae molestias magni aspernatur officia? Ducimus sint quo quia enim veniam, deleniti ipsa suscipit a recusandae ex quas quis nemo accusantium iure corporis, dolores quod.  </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>Minimum requirements</h5>
+            <?php
+          while ($row = mysqli_fetch_assoc($minreqresult)){
+
+            echo'
+            <ul>
+              <li>'.$row['minOS'].'</li>
+              <li>'.$row['minProcessor'].'</li>
+              <li>'.$row['minMemory'].' GB</li>
+              <li>'.$row['minGPU'].'</li>
+              <li>'.$row['minStorage'].'</li>
+            </ul>';
+          }
+            ?>
+          </div>
+          <div class="col-lg-6">
+          <h5>Recommended requirements</h5>
+          <?php
+          while ($row = mysqli_fetch_assoc($recreqresult)){
+
+            echo'
+            <ul>
+              <li>'.$row['recOS'].'</li>
+              <li>'.$row['recProcessor'].'</li>
+              <li>'.$row['recMemory'].' GB</li>
+              <li>'.$row['recGPU'].'</li>
+              <li>'.$row['recStorage'].'</li>
+            </ul>';
+          }
+            ?>
+          </div>
+        </div>
         <?php
               while ($row = mysqli_fetch_assoc($resultpic)){
 
