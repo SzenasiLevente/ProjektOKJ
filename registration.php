@@ -23,22 +23,22 @@ require "header.php"
               <form action="inc/inc_registration.php" method="post">
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="userName" name="userName" class="form-control form-control-lg indexinput"/>
+                  <input type="text" id="userName" name="userName" class="form-control form-control-lg indexinput" required/>
                   <label class="form-label" for="userName">Username</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="email" id="userEmail" name="userEmail" class="form-control form-control-lg indexinput"/>
+                  <input type="email" id="userEmail" name="userEmail" class="form-control form-control-lg indexinput" required/>
                   <label class="form-label" for="userEmail">E-mail</label>
                 </div>
 
                 <div class="form-group mb-4">
-                  <input type="password" id="userPassword" name="userPassword" class="form-control form-control-lg indexinput"/>
+                  <input type="password" id="userPassword" name="userPassword" class="form-control form-control-lg indexinput" required>
                   <label class="form-label" for="userPassword">Password</label>  
                   </div>
 
                   <div class="form-group mb-4">
-                  <input type="password" id="userPasswordConfirm" name="userPasswordConfirm" class="form-control form-control-lg indexinput"/>         
+                  <input type="password" id="userPasswordConfirm" name="userPasswordConfirm" class="form-control form-control-lg indexinput" required/>         
                 <label class="form-label" for="userPasswordConfirm">Confirm password</label>
                 </div>                
 
