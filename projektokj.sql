@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3307
--- Létrehozás ideje: 2022. Feb 02. 09:19
+-- Létrehozás ideje: 2022. Feb 09. 12:03
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -73,6 +73,15 @@ CREATE TABLE `minrequirements` (
   `minStorage` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `minrequirements`
+--
+
+INSERT INTO `minrequirements` (`minId`, `minGId`, `minOS`, `minProcessor`, `minMemory`, `minGPU`, `minStorage`) VALUES
+(1, 1, '64-bit Windows 10', 'Intel Core i5 6600k | AMD Ryzen 5 3600', '8', 'GeForce GTX 1050 Ti | Radeon RX 560', '100 GB'),
+(2, 2, '64-bit Windows 7', 'Intel Core i3-3210 | AMD FX-4350', '4', 'GeForce GTX 750 | Radeon R7 260X', '5 GB'),
+(3, 3, '64-bit Windows 7', '2.3 Ghz Processor', '2', 'Intel HD Graphics 3000', '1500 MB');
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +122,15 @@ CREATE TABLE `recrequirements` (
   `recGPU` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
   `recStorage` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `recrequirements`
+--
+
+INSERT INTO `recrequirements` (`recId`, `recGId`, `recOS`, `recProcessor`, `recMemory`, `recGPU`, `recStorage`) VALUES
+(1, 1, '64-bit Windows 10', 'Intel Core i7 4790 | AMD Ryzen 7 2700X', '16', 'GeForce RTX 3060 | Radeon RX 6600 XT', '100 GB'),
+(2, 2, '64-bit Windows 7', 'Core i5-6400 | Ryzen 3 1200', '6', 'GeForce GTX 1060 6 GB | Radeon RX 470', '5 GB'),
+(3, 3, '64-bit Windows 7', '2.69 Ghz Processor', '8', 'Intel HD Graphics 3000', '1500 MB');
 
 -- --------------------------------------------------------
 
@@ -212,7 +230,7 @@ ALTER TABLE `games`
 -- AUTO_INCREMENT a táblához `minrequirements`
 --
 ALTER TABLE `minrequirements`
-  MODIFY `minId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `minId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT a táblához `nhighscores`
@@ -230,7 +248,7 @@ ALTER TABLE `owngames`
 -- AUTO_INCREMENT a táblához `recrequirements`
 --
 ALTER TABLE `recrequirements`
-  MODIFY `recId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `recId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT a táblához `users`
