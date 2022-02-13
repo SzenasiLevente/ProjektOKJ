@@ -33,8 +33,13 @@ require "header.php"
                 </div>
 
                 <div class="form-group mb-4">
-                  <input type="password" id="userPassword" name="userPassword" class="form-control form-control-lg indexinput" required>
-                  <label class="form-label" for="userPassword">Password</label>  
+                  <input type="password" id="userPassword" name="userPassword" class="form-control form-control-lg indexinput" onclick="passwordClick()" required>
+                  <label class="form-label" for="userPassword">Password</label><br>
+                  <script>
+                    function passwordClick(){
+                    alert("Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.");
+                    }
+                  </script>
                   </div>
 
                   <div class="form-group mb-4">

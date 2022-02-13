@@ -9,6 +9,11 @@ if (isset($_POST['submit'])) {
     $userEmail = mysqli_real_escape_string($connection, $_POST['userEmail']);
     $userAccept = mysqli_real_escape_string($connection, $_POST['userAccept']);
 
+    $uppercase = preg_match('@[A-Z]@', $userPassword);
+    $lowercase = preg_match('@[a-z]@', $userPassword);
+    $number    = preg_match('@[0-9]@', $userPassword);
+    $specialChars = preg_match('@[^\w]@', $userPassword);
+
     if (empty($userName) ||empty($userPassword) ||empty($userPasswordConfirm) || empty($userEmail)) {
         header("Location: ../registration.php?error=emptyFields");
     }
@@ -17,6 +22,9 @@ if (isset($_POST['submit'])) {
     }
     else if ($userPassword != $userPasswordConfirm) {
         header("Location: ../registration.php?error=passwordNomatch");
+    }
+    else if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($userPassword) < 8) {
+        header("Location: ../registration.php?error=passwordWrongFormat");
     }
     else if ($userAccept != "true"){        
         header("Location: ../registration.php?error=termsNotaccepted");
