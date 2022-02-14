@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1:3307
--- Létrehozás ideje: 2022. Feb 09. 12:03
--- Kiszolgáló verziója: 10.4.6-MariaDB
--- PHP verzió: 7.3.8
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2022. Feb 14. 20:44
+-- Kiszolgáló verziója: 10.4.14-MariaDB
+-- PHP verzió: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,6 +33,21 @@ CREATE TABLE `ahighscores` (
   `aGId` int(11) NOT NULL,
   `aScorePoints` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `ahighscores`
+--
+
+INSERT INTO `ahighscores` (`aScoreId`, `aUId`, `aGId`, `aScorePoints`) VALUES
+(1, 5, 1, 879),
+(2, 5, 3, 346),
+(3, 11, 1, 967),
+(4, 13, 1, 832),
+(5, 7, 2, 8792),
+(6, 14, 2, 9348),
+(7, 10, 2, 7962),
+(8, 13, 3, 478),
+(9, 8, 3, 398);
 
 -- --------------------------------------------------------
 
@@ -154,7 +168,18 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`, `userPicture`, `userAdmin`) VALUES
 (1, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com', NULL, b'0'),
 (2, 'test1', '5a105e8b9d40e1329780d62ea2265d8a', 'test1@test.com', NULL, b'0'),
-(3, 'godo', 'e8b554a5700433e00c24dc9df0b079de', 'godo@istvan.com', NULL, b'0');
+(3, 'godo', 'e8b554a5700433e00c24dc9df0b079de', 'godo@istvan.com', NULL, b'0'),
+(4, 'lol', '6f4a9ff0ca341363419a66083c626c00', 'lol@asd.com', NULL, b'0'),
+(5, 'Borderheart', 'cab8c6b15a392c3d1c85ef0dc29e6442', 'Borderheart@email.com', NULL, b'0'),
+(6, 'Bulletreign', '729722e19b83eb8f62cfe7806fea9cb2', 'bulletreign@bruh.com', NULL, b'0'),
+(7, 'Blockfire', '417f2ef09dbd8bfaef894325ca3586f2', 'blockfire54@gmail.com', NULL, b'0'),
+(8, 'Bladenite', '4e7eddc9036d7af5eaf70a03d08996cc', 'BladenIte@generic.com', NULL, b'0'),
+(9, 'Dreadflight', '1c9d771d5219983d1eac1516b7716cb7', 'dreadflight@email.com', NULL, b'0'),
+(10, 'Madcry', 'c2f45ed91cd7b1f6aa4d4673f1363f4f', 'Madcry@email.com', NULL, b'0'),
+(11, 'Altermind', '4348a634d46fdda858bc472d696ad347', 'Altermind@email.com', NULL, b'0'),
+(12, 'Endorflight', 'c5eb0fa50599da6f10119253a686c324', 'Endorflight@email.com', NULL, b'0'),
+(13, 'Bladerain', '2c2331ac81668bd7af881bd7b092eeb8', 'Bladerain@email.com', NULL, b'0'),
+(14, 'Fuserage', '00e296f7d554db0248d8b16479334ec4', 'Fuserage@email.com', NULL, b'0');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -218,7 +243,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `ahighscores`
 --
 ALTER TABLE `ahighscores`
-  MODIFY `aScoreId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `aScoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT a táblához `games`
@@ -254,7 +279,7 @@ ALTER TABLE `recrequirements`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Megkötések a kiírt táblákhoz
