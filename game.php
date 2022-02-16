@@ -1,20 +1,6 @@
 <?php 
 require 'header.php'; 
-$gamename = $_POST['gamehidden'];
-$sqlpic = 'SELECT * FROM `games` WHERE `gameName` = "'.$gamename.'"';
-$resultpic = mysqli_query($connection, $sqlpic);
-
-$minreqsql = 'SELECT `minrequirements`.*
-FROM `games`
-    LEFT JOIN `minrequirements` ON `minrequirements`.`minGId` = `games`.`gameId`
-WHERE `games`.`gameName` = "'.$gamename.'"';
-$minreqresult = mysqli_query($connection, $minreqsql);
-
-$recreqsql = 'SELECT `recrequirements`.*
-FROM `games`
-    LEFT JOIN `recrequirements` ON `recrequirements`.`recGId` = `games`.`gameId`
-WHERE `games`.`gameName` = "'.$gamename.'"';
-$recreqresult = mysqli_query($connection, $recreqsql);
+require 'inc/inc_gamequery.php';
 ?>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -60,13 +46,17 @@ $recreqresult = mysqli_query($connection, $recreqsql);
             ?>
           </div>
         </div>
+        <h3>Game description</h3>
+        <?php
+        while ($row = mysqli_fetch_assoc($descresult)){
+            echo'<p>'.$row["gameDesc"].'</p>';
+        }
+        ?>
+        </div>
         <?php
               while ($row = mysqli_fetch_assoc($resultpic)){
 
                 echo'
-        <h3>Game description</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto ab doloribus. Ratione explicabo facere atque repudiandae sit saepe officia reprehenderit modi mollitia non recusandae accusamus, corrupti quibusdam quidem placeat architecto nobis, nihil quas nesciunt natus sunt expedita. Natus, in, sint, enim quaerat culpa aliquam repellat magni dicta vitae recusandae eum. Nostrum commodi, id vel reiciendis quidem saepe numquam quae. Animi ipsa ratione dignissimos similique?</p>
-        </div>
         <div class="col-lg-6">
           <img src="IMG/'. $row["gamePic"] .'" class="img-fluid rounded rounded mx-auto d-block" style="height: 350px;" alt="gameone">
           <p class="text-center"><a href="#">Get the game here!</a></p>';
@@ -82,21 +72,18 @@ $recreqresult = mysqli_query($connection, $recreqsql);
     </tr>
   </thead>
   <tbody>
+  <?php
+  $place = 0;
+  while ($row = mysqli_fetch_assoc($leaderresult)){
+
+    echo'
     <tr>
-      <th scope="row">1</th>
-      <td>Sanyi</td>
-      <td>50000</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Béla</td>
-      <td>45000</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Karesz</td>
-      <td>40000</td>
-    </tr>
+      <th scope="row">'.strval($place = $place+1).'</th>
+      <td>'.$row["userName"].'</td>
+      <td>'.$row["aScorePoints"].'</td>
+    </tr>';
+  }
+  ?>
   </tbody>
 </table>
       </div>

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Feb 14. 20:44
--- Kiszolgáló verziója: 10.4.14-MariaDB
--- PHP verzió: 7.4.10
+-- Gép: 127.0.0.1:3307
+-- Létrehozás ideje: 2022. Feb 16. 12:24
+-- Kiszolgáló verziója: 10.4.6-MariaDB
+-- PHP verzió: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -59,17 +60,18 @@ CREATE TABLE `games` (
   `gameId` int(11) NOT NULL,
   `gameName` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `gameType` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
-  `gamePic` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL
+  `gamePic` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `gameDesc` varchar(500) COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `games`
 --
 
-INSERT INTO `games` (`gameId`, `gameName`, `gameType`, `gamePic`) VALUES
-(1, 'Call of Battlefield', 'action', 'gameone.png'),
-(2, 'Legend of Zrolda', 'adventure', 'gametwo.png'),
-(3, 'Ratman', 'arcade', 'gamethree.png');
+INSERT INTO `games` (`gameId`, `gameName`, `gameType`, `gamePic`, `gameDesc`) VALUES
+(1, 'Call of Battlefield', 'action', 'gameone.png', 'This game is a fun first-person shooter set in the year 2098 where robots have taken over the planet.\r\nYour job is to get rid of the robots, gathering score with each destroyed unit.\r\nHave fun with a wide array of weapons to choose from, and save the planet!\r\n'),
+(2, 'Legend of Zrolda', 'adventure', 'gametwo.png', 'This game is an adventurous title, beloved by all fans. \r\nIn this games medieval setting your job is to collect the pieces of the king’s crown and reforge it.\r\nPlayers get scored based on their preformance in the dungeons, killing skeletons, scavaging loot and completing side quests.\r\n'),
+(3, 'Ratman', 'arcade', 'gamethree.png', 'Ratman is a game that needs to introduction, first introduced in the 1980s it has since long become an international sensation.\r\nYour objective is to gather the cheese pieces scattered throughout the map avoiding the AI controlled cats that are trying to stop you.\r\nTry to get a high score!\r\n');
 
 -- --------------------------------------------------------
 
