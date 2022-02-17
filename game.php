@@ -10,16 +10,47 @@ require 'inc/inc_gamequery.php';
 
       <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
       <div class="container-fluid">
-        <div class="row">
-        <div class="col-lg-6">
-        <div class="row">
-          <div class="col-lg-6">
-            <h5>Minimum requirements</h5>
-            <?php
+      <div class="card bg-dark">
+    <div class="row">
+
+      <div class="col-md-7 px-3">
+        <div class="card-block px-6">
+          <h4 class="card-title mx-5 my-5">Game description</h4>
+          <p class="card-text">
+        <?php
+        while ($row = mysqli_fetch_assoc($descresult)){
+            echo'<p class="mx-5">'.$row["gameDesc"].'</p>
+            <button class="btn btn-light mx-5 my-5">Get the game here</button>';
+        }
+        ?>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5">
+      <?php
+              while ($row = mysqli_fetch_assoc($resultpic)){
+
+                echo'
+          <img src="IMG/'. $row["gamePic"] .'" class="img-fluid  rounded mx-auto d-block float-right" alt="gameone">';
+          }
+        ?>
+      </div>
+        </div>
+
+      </div>
+
+      <div class="card bg-dark my-3">
+    <div class="row">
+
+      <div class="col-md-6 px-3">
+        <div class="card-block px-6">
+          <h4 class="card-title mx-5 my-5">Minimum requirements</h4>
+          <p class="card-text">
+          <?php
           while ($row = mysqli_fetch_assoc($minreqresult)){
 
             echo'
-            <ul>
+            <ul class="mx-5 my-5">
               <li>'.$row['minOS'].'</li>
               <li>'.$row['minProcessor'].'</li>
               <li>'.$row['minMemory'].' GB</li>
@@ -28,14 +59,17 @@ require 'inc/inc_gamequery.php';
             </ul>';
           }
             ?>
-          </div>
-          <div class="col-lg-6">
-          <h5>Recommended requirements</h5>
-          <?php
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+      <h4 class="card-title mx-5 my-5">Recommended requirements</h4>
+      <p class="card-text">
+      <?php
           while ($row = mysqli_fetch_assoc($recreqresult)){
 
             echo'
-            <ul>
+            <ul class="mx-5 my-5">
               <li>'.$row['recOS'].'</li>
               <li>'.$row['recProcessor'].'</li>
               <li>'.$row['recMemory'].' GB</li>
@@ -44,50 +78,9 @@ require 'inc/inc_gamequery.php';
             </ul>';
           }
             ?>
-          </div>
-        </div>
-        <h3>Game description</h3>
-        <?php
-        while ($row = mysqli_fetch_assoc($descresult)){
-            echo'<p>'.$row["gameDesc"].'</p>';
-        }
-        ?>
-        </div>
-        <?php
-              while ($row = mysqli_fetch_assoc($resultpic)){
-
-                echo'
-        <div class="col-lg-6">
-          <img src="IMG/'. $row["gamePic"] .'" class="img-fluid rounded rounded mx-auto d-block" style="height: 350px;" alt="gameone">
-          <p class="text-center"><a href="#">Get the game here!</a></p>';
-          }
-        ?>
-
-          <table class="table table-striped table-light text-center">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Username</th>
-      <th scope="col">Points</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php
-  $place = 0;
-  while ($row = mysqli_fetch_assoc($leaderresult)){
-
-    echo'
-    <tr>
-      <th scope="row">'.strval($place = $place+1).'</th>
-      <td>'.$row["userName"].'</td>
-      <td>'.$row["aScorePoints"].'</td>
-    </tr>';
-  }
-  ?>
-  </tbody>
-</table>
+      </p>
       </div>
-        </div>
+
       </div>
       </div>
     </main>

@@ -69,24 +69,24 @@ require 'inc/inc_connection.php';
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
-              <a class="nav-link" aria-current="page" href="gameone.php">
+              <a class="nav-link" aria-current="page" href="game.php">
               <i class="bi bi-controller"></i>
                 <span data-feather="home"></span>
-                Game 1
+                Call of Battlefield
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gametwo.php">
+              <a class="nav-link" href="game.php">
               <i class="bi bi-controller"></i>
                 <span data-feather="bar-chart-2"></span>
-                Game 2
+                Legend of Zrolda
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gamethree.php">
+              <a class="nav-link" href="game.php">
               <i class="bi bi-controller"></i>
                 <span data-feather="layers"></span>
-                Game 3
+                Ratman
               </a>
             </li>
           </ul>
