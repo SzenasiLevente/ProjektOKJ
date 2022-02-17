@@ -5,3 +5,5 @@ https://mdbootstrap.com/docs/standard/extended/registration/ #7
 https://www.systemrequirementslab.com/cyri/requirements/battlefield-2042/20953
 https://store.steampowered.com/app/921570/OCTOPATH_TRAVELER/
 https://store.steampowered.com/app/394160/ARCADE_GAME_SERIES_PACMAN/
+
+https://codepen.io/fernstedt/pen/mxGzor
