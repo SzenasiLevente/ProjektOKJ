@@ -10,7 +10,7 @@ require 'inc/inc_gamequery.php';
 
       <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
       <div class="container-fluid">
-      <div class="card bg-dark">
+      <div class="card bg-dark my-3">
     <div class="row">
 
       <div class="col-md-7 px-3">
@@ -62,7 +62,7 @@ require 'inc/inc_gamequery.php';
           </p>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 px-3">
       <h4 class="card-title mx-5 my-5">Recommended requirements</h4>
       <p class="card-text">
       <?php
@@ -83,6 +83,42 @@ require 'inc/inc_gamequery.php';
 
       </div>
       </div>
+      <div class="card bg-dark my-3">
+    <div class="row">
+
+      <div class="col-md-12 px-3">
+        <div class="card-block px-6">
+          <h4 class="card-title mx-5 my-5">Top 3 leaderboard</h4>
+          <div class="table-responsive">
+          <table class="table table-striped table-light text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+  $place = 0;
+  while ($row = mysqli_fetch_assoc($leaderresult)){
+
+    echo'
+    <tr>
+      <th scope="row">'.strval($place = $place+1).'</th>
+      <td>'.$row["userName"].'</td>
+      <td>'.$row["aScorePoints"].'</td>
+    </tr>';
+  }
+  ?>
+  </tbody>
+</table>
+</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
     </main>
 
 <?php require 'footer.php'; ?>
