@@ -31,7 +31,7 @@ require 'inc/inc_gamequery.php';
               while ($row = mysqli_fetch_assoc($resultpic)){
 
                 echo'
-          <img src="IMG/'. $row["gamePic"] .'" class="img-fluid  rounded mx-auto d-block float-right" alt="gameone">';
+          <img src="IMG/'. $row["gamePic"] .'" class="img-fluid img-responsive rounded mx-auto d-block float-right" alt="gameone">';
           }
         ?>
       </div>
