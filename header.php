@@ -75,8 +75,8 @@ require 'inc/inc_connection.php';
                 <span data-feather="home"></span>
                 Call of Battlefield
               </a>
-              <input type="hidden" name="gamehidden" value="Call of Battlefield">
-              </form>
+              <input type="hidden" href="game.php" name="gamehidden" value="Call of Battlefield">
+            </form>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="game.php">

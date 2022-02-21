@@ -62,7 +62,8 @@ require 'inc/inc_gamequery.php';
           </p>
         </div>
       </div>
-      <div class="col-md-6 px-3">
+      <div class="col-md-6 px-3">        
+      <div class="card-block px-6">
       <h4 class="card-title mx-5 my-5">Recommended requirements</h4>
       <p class="card-text">
       <?php
@@ -80,7 +81,7 @@ require 'inc/inc_gamequery.php';
             ?>
       </p>
       </div>
-
+      </div>
       </div>
       </div>
       <div class="card bg-dark my-3">
