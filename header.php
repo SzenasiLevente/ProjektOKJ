@@ -69,11 +69,14 @@ require 'inc/inc_connection.php';
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
+          <form action="inc/inc_gamequery.php" method="post">
               <a class="nav-link" aria-current="page" href="game.php">
               <i class="bi bi-controller"></i>
                 <span data-feather="home"></span>
                 Call of Battlefield
               </a>
+              <input type="hidden" name="gamehidden" value="Call of Battlefield">
+              </form>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="game.php">
