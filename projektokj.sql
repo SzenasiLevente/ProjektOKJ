@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1:3307
--- Létrehozás ideje: 2022. Feb 16. 12:24
--- Kiszolgáló verziója: 10.4.6-MariaDB
--- PHP verzió: 7.3.8
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2022. Feb 23. 18:07
+-- Kiszolgáló verziója: 10.4.14-MariaDB
+-- PHP verzió: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -123,6 +122,21 @@ CREATE TABLE `owngames` (
   `ownGId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `owngames`
+--
+
+INSERT INTO `owngames` (`ownId`, `ownUId`, `ownGId`) VALUES
+(1, 5, 1),
+(2, 5, 3),
+(3, 11, 1),
+(4, 13, 1),
+(5, 7, 2),
+(6, 14, 2),
+(7, 10, 2),
+(8, 13, 3),
+(9, 8, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -168,7 +182,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`, `userPicture`, `userAdmin`) VALUES
-(1, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com', NULL, b'0'),
+(1, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com', NULL, b'1'),
 (2, 'test1', '5a105e8b9d40e1329780d62ea2265d8a', 'test1@test.com', NULL, b'0'),
 (3, 'godo', 'e8b554a5700433e00c24dc9df0b079de', 'godo@istvan.com', NULL, b'0'),
 (4, 'lol', '6f4a9ff0ca341363419a66083c626c00', 'lol@asd.com', NULL, b'0'),
@@ -269,7 +283,7 @@ ALTER TABLE `nhighscores`
 -- AUTO_INCREMENT a táblához `owngames`
 --
 ALTER TABLE `owngames`
-  MODIFY `ownId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ownId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT a táblához `recrequirements`
