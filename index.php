@@ -11,15 +11,15 @@
       <div class="container-fluid">
         <div class="row">
         <div class="col-lg-6">
-        <h3>Categories</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto ab doloribus. Ratione explicabo facere atque repudiandae sit saepe officia reprehenderit modi mollitia non recusandae accusamus, corrupti quibusdam quidem placeat architecto nobis, nihil quas nesciunt natus sunt expedita. Natus, in, sint, enim quaerat culpa aliquam repellat magni dicta vitae recusandae eum. Nostrum commodi, id vel reiciendis quidem saepe numquam quae. Animi ipsa ratione dignissimos similique?</p>
+        <h3>Introduction to Vapour</h3>
+        <p>Vapour is a free-to-use videogame distribution service created for the purpose of archiving the games our studio has made in the past, complete with a progression tracker for players, system requirements and your very own player profile!<br>If this idea takes off we might even put our latest titles on this page!<br> Our browser based digital storefront is available on all devices, making our softwares more widely available than ever before.</p>
         </div>
         <div class="col-lg-6">
         <h3>Why is it free?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda porro amet corporis explicabo expedita soluta commodi repellat sequi ipsum nulla, atque alias tempore sed ratione illo exercitationem accusamus qui eaque vitae molestias magni aspernatur officia? Ducimus sint quo quia enim veniam, deleniti ipsa suscipit a recusandae ex quas quis nemo accusantium iure corporis, dolores quod.  </p>
+        <p>Our company has made a great amount of titles over the years, and of course with time sadly all of them are bound to become abandonware.<br>Our studio has brainstormed a lot considering options of how to counteract this issue, and we have came to the conclusion that since they're abandoned we might as well make them free-to-use so the legacy of our older titles can live on.</p>
         </div>
         <div class="col-lg-12 border-top mt-4">
-        <h3 class="mt-2 text-center">Upcoming releases</h3>
+        <h3 class="mt-2 text-center">Upcoming game releases</h3>
 
         <div class="pl-auto">
         <div class="container-flex">
@@ -30,8 +30,9 @@
 
             <iframe class="embed-responsive-item" width="325" height="200" src="https://www.youtube.com/embed/pb55ycOwGFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               
-              <iframe width="325" height="200" src="https://www.youtube.com/embed/AKXiKBnzpBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" width="325" height="200" src="https://www.youtube.com/embed/AKXiKBnzpBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           
+                <iframe class="embed-responsive-item" width="325" height="200" src="https://www.youtube.com/embed/ASlkM-mf1zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               </div>
               </div>
