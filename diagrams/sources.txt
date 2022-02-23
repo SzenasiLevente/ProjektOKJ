@@ -7,3 +7,5 @@ https://store.steampowered.com/app/921570/OCTOPATH_TRAVELER/
 https://store.steampowered.com/app/394160/ARCADE_GAME_SERIES_PACMAN/
 
 https://codepen.io/fernstedt/pen/mxGzor
+
+https://getbootstrap.com/docs/5.0/examples/sticky-footer/
