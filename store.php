@@ -36,7 +36,7 @@ $resultgame = mysqli_query($connection, $sqlgame);
         echo '
         <div class="carousel-item">
         <form action="game.php" method="POST">
-        <input href="game.php" type="image" src="IMG/'.$row["gamePic"].'" class="d-block w-100" name="submit">
+        <input href="game.php" type="image" src="IMG/'.$row["gamePic"].'" class="d-block w-100" name="submitimg">
         <input type="hidden" name="gamehidden" value="'.$row["gameName"].'">
         </form>
           <div class="carousel-caption d-none d-md-block">

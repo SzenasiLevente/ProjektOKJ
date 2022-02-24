@@ -195,6 +195,13 @@ img {
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-top: 20px;
 }
-.card-img{
+.card-img {
     min-height: 100%;
 }
+.headergame {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    color: white !important;
+
+  }
