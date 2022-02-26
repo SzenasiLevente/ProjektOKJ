@@ -156,11 +156,12 @@ img {
     text-justify: inter-word;
 }
 
-.carousel{    
+.carousel {
     border-radius: 15px 15px 15px 15px;
     border: #343a40 5px solid;
     overflow: hidden;
 }
+
 .carousel .item {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0);
@@ -195,13 +196,14 @@ img {
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-top: 20px;
 }
+
 .card-img {
     min-height: 100%;
 }
+
 .headergame {
     background: none !important;
     border: none;
     padding: 0 !important;
     color: white !important;
-
-  }
+}

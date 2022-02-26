@@ -69,24 +69,22 @@ require 'inc/inc_connection.php';
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
-          <form action="inc/inc_gamequery.php" method="post">
+          <form action="game.php" method="post">
               <button class="btn headergame nav-link" type="submit" name="submit"><i class="bi bi-controller"></i> Call of Battlefield</button>
               <input type="hidden" name="gamehidden" value="Call of Battlefield">
             </form>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="game.php">
-              <i class="bi bi-controller"></i>
-                <span data-feather="bar-chart-2"></span>
-                Legend of Zrolda
-              </a>
+            <form action="game.php" method="post">
+              <button class="btn headergame nav-link" type="submit" name="submit"><i class="bi bi-controller"></i> Legend of Zrolda</button>
+              <input type="hidden" name="gamehidden" value="Legend of Zrolda">
+            </form>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="game.php">
-              <i class="bi bi-controller"></i>
-                <span data-feather="layers"></span>
-                Ratman
-              </a>
+            <form action="game.php" method="post">
+              <button class="btn headergame nav-link" type="submit" name="submit"><i class="bi bi-controller"></i> Ratman</button>
+              <input type="hidden" name="gamehidden" value="Ratman">
+            </form>
             </li>
           </ul>
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
