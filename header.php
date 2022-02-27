@@ -62,27 +62,27 @@ require 'inc/inc_connection.php';
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
-            <li class="nav-item">
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Games</span>
             <a class="link-secondary" href="#">
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
+            <li class="nav-item px-3">
           <form action="game.php" method="post">
-              <button class="btn headergame nav-link" type="submit" name="submit"><i class="bi bi-controller"></i> Call of Battlefield</button>
+              <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Call of Battlefield</button>
               <input type="hidden" name="gamehidden" value="Call of Battlefield">
             </form>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3 py-3">
             <form action="game.php" method="post">
-              <button class="btn headergame nav-link" type="submit" name="submit"><i class="bi bi-controller"></i> Legend of Zrolda</button>
+              <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Legend of Zrolda</button>
               <input type="hidden" name="gamehidden" value="Legend of Zrolda">
             </form>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
             <form action="game.php" method="post">
-              <button class="btn headergame nav-link" type="submit" name="submit"><i class="bi bi-controller"></i> Ratman</button>
+              <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Ratman</button>
               <input type="hidden" name="gamehidden" value="Ratman">
             </form>
             </li>
