@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Feb 23. 18:07
+-- Létrehozás ideje: 2022. Már 02. 06:03
 -- Kiszolgáló verziója: 10.4.14-MariaDB
 -- PHP verzió: 7.4.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `projektokj`
 --
+CREATE DATABASE IF NOT EXISTS `projektokj` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+USE `projektokj`;
 
 -- --------------------------------------------------------
 
@@ -47,7 +49,9 @@ INSERT INTO `ahighscores` (`aScoreId`, `aUId`, `aGId`, `aScorePoints`) VALUES
 (6, 14, 2, 9348),
 (7, 10, 2, 7962),
 (8, 13, 3, 478),
-(9, 8, 3, 398);
+(9, 8, 3, 398),
+(10, 1, 1, 550),
+(11, 1, 3, 114);
 
 -- --------------------------------------------------------
 
@@ -135,7 +139,10 @@ INSERT INTO `owngames` (`ownId`, `ownUId`, `ownGId`) VALUES
 (6, 14, 2),
 (7, 10, 2),
 (8, 13, 3),
-(9, 8, 3);
+(9, 8, 3),
+(10, 1, 1),
+(11, 1, 2),
+(12, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -259,7 +266,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `ahighscores`
 --
 ALTER TABLE `ahighscores`
-  MODIFY `aScoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `aScoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `games`
@@ -283,7 +290,7 @@ ALTER TABLE `nhighscores`
 -- AUTO_INCREMENT a táblához `owngames`
 --
 ALTER TABLE `owngames`
-  MODIFY `ownId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ownId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT a táblához `recrequirements`
