@@ -107,12 +107,23 @@ require 'inc/inc_connection.php';
                 Profile
               </a>
             </li>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="aboutus.php">
               <i class="bi bi-mouse2"></i>
                 <span data-feather="file-text"></span>
                 About us
+              </a>
+            </li>
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Admin</span>
+              <span data-feather="plus-circle"></span>
+            </a>
+            </h6>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.php">
+              <i class="bi bi-arrow-up-square"></i>
+                <span data-feather="file-text"></span>
+                Score approval
               </a>
             </li>
           </ul>
