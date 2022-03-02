@@ -10,13 +10,13 @@ require 'inc/inc_profquery.php';
 
       <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
       <div class="container-fluid">
-      <div class="card bg-dark my-3">
+      <div class="card bg-dark my-3 prof-card">
     <div class="row">
 
       <div class="col-md-7 px-3">
         <div class="card-block px-6">
           <h4 class="card-title mx-5 my-5">Owned games</h4>
-          <p class="card-text">
+          <p class="card-text ">
           <ul class="mx-5 my-5">
           <?php
           while ($row = mysqli_fetch_assoc($resultgames)){
@@ -28,26 +28,24 @@ require 'inc/inc_profquery.php';
           </p>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 img-fluid">
       <?php
-              while ($row = mysqli_fetch_assoc($respic)){
-                if($row["userPicture"] == null)
+                if($valuepic == NULL)
                 {
                   echo'
-                  <img src="IMG/def.jpg" class="img-fluid card-img rounded mx-auto d-block float-right">';
+                  <img src="IMG/def.jpg" class="img-fluid prof-img rounded mx-auto d-block>';
                 }
                 else{
                   echo'
-                  <img src="IMG/'. $row["userPicture"] .'" class="img-fluid card-img rounded mx-auto d-block float-right">';
+                  <img src="IMG/'. $valuepic .'" class="img-fluid prof-img rounded mx-auto d-block">';
                 }               
-          }
         ?>
       </div>
         </div>
 
       </div>
 
-      <div class="card bg-dark my-3">
+      <div class="card bg-dark my-3" style="max-h">
     <div class="row">
 
       <div class="col-md-12 px-3">

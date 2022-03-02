@@ -201,6 +201,14 @@ img {
     min-height: 100%;
 }
 
+.prof-card {
+    max-height: 40% !important;
+}
+.prof-img {
+    max-height: 80%;
+    float: right;
+}
+
 .headergame {
     background: none !important;
     border: none;

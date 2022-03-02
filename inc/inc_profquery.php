@@ -19,7 +19,13 @@ FROM `users`
 $resultscores = mysqli_query($connection,$scores);
 
 $profilepic = 'SELECT `users`.`userPicture`
-WHERE `users`.`userName` ="'.$_SESSION["username"].'"';
+FROM `users`
+WHERE `users`.`userName` = "'.$_SESSION['username'].'" LIMIT 1';
 
-$respic = mysqli_query($connection,$profilepic);
+    $querypic = mysqli_query($connection,$profilepic);
+    $resultpic = mysqli_fetch_assoc($querypic);
+    $valuepic = $resultpic["userPicture"];
+
+
+
 
