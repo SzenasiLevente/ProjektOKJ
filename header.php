@@ -26,9 +26,9 @@ require 'inc/inc_connection.php';
   </button>
   <div class="container-fluid">
 
-    <?php
+  <?php
     if (isset($_SESSION['username'])) {
-      echo ' 
+      echo '   
                   <ul class="navbar-navme ms-auto my-auto">
                         <li class="nav-item"><span class="navbar-text me-2 welcome-p">Welcome ' . $_SESSION['username'] . '!</span></li>
                   </ul>       
@@ -100,13 +100,18 @@ require 'inc/inc_connection.php';
                 Selection of freeware
               </a>
             </li>
+            <?php
+            if (isset($_SESSION['username'])) {
+             echo ' 
             <li class="nav-item">
               <a class="nav-link" href="profile.php">
               <i class="bi bi-person-circle"></i>
                 <span data-feather="file-text"></span>
                 Profile
               </a>
-            </li>
+            </li>';
+            }
+            ?>
             <li class="nav-item">
               <a class="nav-link" href="aboutus.php">
               <i class="bi bi-mouse2"></i>
@@ -114,18 +119,34 @@ require 'inc/inc_connection.php';
                 About us
               </a>
             </li>
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Admin</span>
-              <span data-feather="plus-circle"></span>
-            </a>
-            </h6>
-            <li class="nav-item">
-              <a class="nav-link" href="admin.php">
-              <i class="bi bi-arrow-up-square"></i>
-                <span data-feather="file-text"></span>
-                Score approval
-              </a>
-            </li>
+            <?php
+            if (isset($_SESSION['username'])) {
+              $admin = 'SELECT `users`.`userAdmin`
+              FROM `users`
+              WHERE `users`.`userName` = "'.$_SESSION['username'].'" LIMIT 1';
+
+              $adminquery = mysqli_query($connection,$admin);
+              $adminresult = mysqli_fetch_assoc($adminquery);
+              $adminvalue = $adminresult["userAdmin"];
+
+              if ($adminvalue == 1){
+                echo '
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Admin</span>
+                  <span data-feather="plus-circle"></span>
+                </a>
+                </h6>
+                <li class="nav-item">
+                  <a class="nav-link" href="admin.php">
+                  <i class="bi bi-arrow-up-square"></i>
+                    <span data-feather="file-text"></span>
+                    Score approval
+                  </a>
+                </li>
+                ';
+              }
+            }
+            ?>
           </ul>
         </div>
       </nav>
