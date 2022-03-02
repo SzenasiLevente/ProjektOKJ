@@ -199,14 +199,11 @@ img {
 
 .card-img {
     min-height: 100%;
+    overflow: hidden;
 }
 
 .prof-card {
     max-height: 40% !important;
-}
-.prof-img {
-    max-height: 80%;
-    float: right;
 }
 
 .headergame {

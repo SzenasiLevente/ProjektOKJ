@@ -10,34 +10,35 @@ require 'inc/inc_profquery.php';
 
       <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
       <div class="container-fluid">
-      <div class="card bg-dark my-3 prof-card">
+      <div class="card bg-dark my-3">
     <div class="row">
 
       <div class="col-md-7 px-3">
         <div class="card-block px-6">
           <h4 class="card-title mx-5 my-5">Owned games</h4>
-          <p class="card-text ">
+          <p class="card-text">
           <ul class="mx-5 my-5">
           <?php
           while ($row = mysqli_fetch_assoc($resultgames)){
             echo'
               <li>'.$row['gameName'].'</li>';
           }
-            ?>
+            ?>            
           </ul>
+          <button class="btn btn-light mx-5 my-5">Upload picture</button>
           </p>
         </div>
       </div>
-      <div class="col-md-5 img-fluid">
+      <div class="col-md-5">
       <?php
                 if($valuepic == NULL)
                 {
                   echo'
-                  <img src="IMG/def.jpg" class="img-fluid prof-img rounded mx-auto d-block>';
+                  <img src="IMG/def.jpg" class="img-fluid card-img rounded mx-auto d-block>';
                 }
                 else{
                   echo'
-                  <img src="IMG/'. $valuepic .'" class="img-fluid prof-img rounded mx-auto d-block">';
+                  <img src="IMG/'. $valuepic .'" class="img-fluid card-img rounded mx-auto d-block">';
                 }               
         ?>
       </div>
