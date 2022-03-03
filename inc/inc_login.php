@@ -30,6 +30,9 @@ if (isset($_POST['submit'])) {
 
         header("Location: ../index.php?login=ok");
     }
+    else {
+        header("Location: ../index.php?login=error");
+    }
 }
 else
 {
