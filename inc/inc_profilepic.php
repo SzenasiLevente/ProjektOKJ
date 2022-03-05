@@ -53,7 +53,6 @@ if (isset($_POST['submit'])) {
 
         mysqli_stmt_execute($picstatement);
 
-           echo 'siker';
            header("Location: ../profile.php?picture=".$file_name."");
        }
        else {
