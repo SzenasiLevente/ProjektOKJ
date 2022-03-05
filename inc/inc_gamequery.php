@@ -6,7 +6,7 @@ require "inc_connection.php";
     $sqlpic = 'SELECT * FROM `games` WHERE `gameName` = "'.$gamename.'"';
     $resultpic = mysqli_query($connection, $sqlpic);
     
-    $minreqsql = 'SELECT `minrequirements`.*
+    $minreqsql = 'SELECT `minrequirements`.*    
     FROM `games`
         LEFT JOIN `minrequirements` ON `minrequirements`.`minGId` = `games`.`gameId`
     WHERE `games`.`gameName` = "'.$gamename.'"';

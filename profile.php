@@ -21,11 +21,16 @@ require 'inc/inc_profquery.php';
                   <?php
                   while ($row = mysqli_fetch_assoc($resultgames)) {
                     echo '
-              <li>' . $row['gameName'] . '</li>';
+                    <li>' . $row['gameName'] . '</li>';
                   }
                   ?>
                 </ul>
-                <button class="btn btn-light mx-5 my-5">Upload picture</button>
+                <form method="post" action="inc/inc_profilepic.php" enctype="multipart/form-data">
+                <div class="form-group text-center mx-5 mt-auto">
+                <input name="profilePic" class="form-control" type="file">
+                   <button type="submit" name="submit" class="btn btn-light mx-5 my-3">Upload profile picture</button>
+                   </div>
+                </form>
               </p>
             </div>
           </div>
@@ -65,11 +70,11 @@ require 'inc/inc_profquery.php';
                     $place = 0;
                     while ($row = mysqli_fetch_assoc($resultscores)) {
                       echo '
-    <tr>
-      <th scope="row">' . strval($place = $place + 1) . '</th>
-      <td>' . $row["gameName"] . '</td>
-      <td>' . $row["aScorePoints"] . '</td>
-    </tr>';
+                        <tr>
+                          <th scope="row">' . strval($place = $place + 1) . '</th>
+                          <td>' . $row["gameName"] . '</td>
+                          <td>' . $row["aScorePoints"] . '</td>
+                        </tr>';
                     }
                     ?>
                   </tbody>
