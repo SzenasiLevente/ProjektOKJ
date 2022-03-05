@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "inc_connection.php";
 
 if (isset($_POST['submit'])) {
@@ -44,13 +45,13 @@ if (isset($_POST['submit'])) {
     {
        if (move_uploaded_file($_FILES["profilePic"]["tmp_name"], $final_upload_name)) {
 
-        $sql = 'UPDATE `users` SET `userPicture`= ? WHERE `userName` = "'.$_SESSION['username'].'"';
+        $picsql = 'UPDATE `users` SET `userPicture`= ? WHERE `userName` = "'.$_SESSION['username'].'"';
 
-        $statement = mysqli_prepare($connection, $sql);
+        $picstatement = mysqli_prepare($connection, $picsql);
 
-        mysqli_stmt_bind_param($statement, "s", $file_name);
+        mysqli_stmt_bind_param($picstatement, "s", $file_name);
 
-        mysqli_stmt_execute($statement);
+        mysqli_stmt_execute($picstatement);
 
            echo 'siker';
            header("Location: ../profile.php?picture=".$file_name."");
