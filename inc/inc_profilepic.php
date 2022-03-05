@@ -14,32 +14,32 @@ if (isset($_POST['submit'])) {
 
     if(empty($file_name)){
         $uploadOk = false;
-        header("Location: ../profile.php?picture=error");
+        header("Location: ../profile.php?error=emptyfile");
     }
     if ($check !== false) {
         $uploadOk = true;
     }
     else {
         $uploadOk = false;
-        echo 'file check';
+        header("Location: ../profile.php?error=notpicture");
     }
 
     if (file_exists($final_upload_name)) { 
         $uploadOk = false;
-        echo'filename' ;
+        header("Location: ../profile.php?error=alreadyexists");
     }
     if ($_FILES["profilePic"]["size"] > 5000000) {
         $uploadOk = false;
-        echo 'filesize';
+        header("Location: ../profile.php?error=filetoolarge");
      }
 
      
     if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png" && $imageFileType != "gif") {
         $uploadOk = false;
-        echo 'filetype';
+        header("Location: ../profile.php?error=incorrectfiletype");
      }
      if ($uploadOk == false) {
-        echo 'error';
+        header("Location: ../profile.php?error=uploadfailed");
     }
     else
     {
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
            header("Location: ../profile.php?picture=".$file_name."");
        }
        else {
-           echo 'error file';
+        header("Location: ../profile.php?error=fileerror");
        }
     }
 }
