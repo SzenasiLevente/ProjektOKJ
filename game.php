@@ -22,7 +22,6 @@ require 'inc/inc_gamequery.php';
             echo'<p class="mx-5">'.$row["gameDesc"].'</p>';
         }
         ?>
-        <button class="btn btn-light mx-5 my-5">Get the game here</button>
           </p>
         </div>
       </div>
@@ -35,7 +34,12 @@ require 'inc/inc_gamequery.php';
           }
         ?>
       </div>
+      <div class="col-md-12">
+      <div class="text-center pb-4">
+        <button class="btn btn-light mx-auto" style="width:35%;">Get the game here</button>
         </div>
+      </div>
+      </div>
 
       </div>
 
