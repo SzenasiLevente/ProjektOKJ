@@ -19,10 +19,10 @@ require 'inc/inc_gamequery.php';
           <p class="card-text">
         <?php
         while ($row = mysqli_fetch_assoc($descresult)){
-            echo'<p class="mx-5">'.$row["gameDesc"].'</p>
-            <button class="btn btn-light mx-5 my-5">Get the game here</button>';
+            echo'<p class="mx-5">'.$row["gameDesc"].'</p>';
         }
         ?>
+        <button class="btn btn-light mx-5 my-5">Get the game here</button>
           </p>
         </div>
       </div>

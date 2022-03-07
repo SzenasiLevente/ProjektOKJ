@@ -80,6 +80,21 @@ require 'inc/inc_profquery.php';
                   </tbody>
                 </table>
               </div>
+              <div class="col-md-12">
+                <form action="inc/inc_scoresub.php" method="post">
+                <div class="container text-center">
+                <select name="gameSelect" id="gameSelect">
+                <?php
+                  while ($row = mysqli_fetch_assoc($resultgames2)) {
+                    echo '<option value="'.$row["gameName"].'">'.$row["gameName"].'</option>';
+                  }
+                  ?>
+                </select>
+                <input type="number" name="scoreIn">
+                <button type="submit" name="scoreSubmit" class="btn btn-light mx-1">Upload Score</button>
+                </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -26,6 +26,12 @@ WHERE `users`.`userName` = "'.$_SESSION['username'].'" LIMIT 1';
     $resultpic = mysqli_fetch_assoc($querypic);
     $valuepic = $resultpic["userPicture"];
 
-
+    $games2 = 'SELECT `games`.`gameName`
+    FROM `users`
+        LEFT JOIN `owngames` ON `owngames`.`ownUId` = `users`.`userId`
+        LEFT JOIN `games` ON `owngames`.`ownGId` = `games`.`gameId`
+    WHERE `users`.`userName` ="'.$_SESSION["username"].'"';
+    
+    $resultgames2 = mysqli_query($connection,$games);
 
 
