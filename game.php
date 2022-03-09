@@ -35,7 +35,7 @@ require 'inc/inc_gamequery.php';
         ?>
       </div>
       <div class="col-md-12">
-      <div class="text-center pb-4">
+      <div class="text-center pb-4 mt-1">
         <button class="btn btn-light mx-auto" style="width:35%;">Get the game here</button>
         </div>
       </div>
