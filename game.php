@@ -35,12 +35,20 @@ require 'inc/inc_gamequery.php';
         ?>
       </div>
       <div class="col-md-12">
+      <?php
+            if (isset($_SESSION['username'])) {
+             echo ' 
       <div class="text-center pb-4 mt-1">
         <button class="btn btn-light mx-auto" style="width:35%;">Get the game here</button>
-        </div>
-      </div>
-      </div>
-
+      </div>';
+    }
+    else{
+      echo'<div class="text-center pb-4 mt-1">
+      <p>Register to download the game!</p>
+    </div>';
+    }?>
+          </div>
+          </div>
       </div>
 
       <div class="card bg-dark my-3">
