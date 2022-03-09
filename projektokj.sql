@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Már 02. 06:03
--- Kiszolgáló verziója: 10.4.14-MariaDB
--- PHP verzió: 7.4.10
+-- Gép: 127.0.0.1:3307
+-- Létrehozás ideje: 2022. Már 09. 09:12
+-- Kiszolgáló verziója: 10.4.6-MariaDB
+-- PHP verzió: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -51,7 +52,11 @@ INSERT INTO `ahighscores` (`aScoreId`, `aUId`, `aGId`, `aScorePoints`) VALUES
 (8, 13, 3, 478),
 (9, 8, 3, 398),
 (10, 1, 1, 550),
-(11, 1, 3, 114);
+(11, 1, 3, 114),
+(12, 1, 1, 502),
+(13, 1, 3, 112),
+(14, 1, 1, 841),
+(15, 11, 1, 874);
 
 -- --------------------------------------------------------
 
@@ -73,7 +78,7 @@ CREATE TABLE `games` (
 
 INSERT INTO `games` (`gameId`, `gameName`, `gameType`, `gamePic`, `gameDesc`) VALUES
 (1, 'Call of Battlefield', 'action', 'gameone.png', 'This game is a fun first-person shooter set in the year 2098 where robots have taken over the planet.\r\nYour job is to get rid of the robots, gathering score with each destroyed unit.\r\nHave fun with a wide array of weapons to choose from, and save the planet!\r\n'),
-(2, 'Legend of Zrolda', 'adventure', 'gametwo.png', 'This game is an adventurous title, beloved by all fans. \r\nIn this games medieval setting your job is to collect the pieces of the king’s crown and reforge it.\r\nPlayers get scored based on their preformance in the dungeons, killing skeletons, scavaging loot and completing side quests.\r\n'),
+(2, 'Legend of Zrolda', 'adventure', 'gametwo.png', 'This game is an adventurous title, beloved by all fans. \r\nIn this games medieval setting your job is to collect the pieces of the kings crown and reforge it.\r\nPlayers get scored based on their preformance in the dungeons, killing skeletons, scavaging loot and completing side quests.\r\n'),
 (3, 'Ratman', 'arcade', 'gamethree.png', 'Ratman is a game that needs to introduction, first introduced in the 1980s it has since long become an international sensation.\r\nYour objective is to gather the cheese pieces scattered throughout the map avoiding the AI controlled cats that are trying to stop you.\r\nTry to get a high score!\r\n');
 
 -- --------------------------------------------------------
@@ -113,6 +118,19 @@ CREATE TABLE `nhighscores` (
   `nGId` int(11) NOT NULL,
   `nScorePoints` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `nhighscores`
+--
+
+INSERT INTO `nhighscores` (`nScoreId`, `nUId`, `nGId`, `nScorePoints`) VALUES
+(7, 5, 1, 647),
+(9, 8, 3, 367),
+(10, 14, 2, 7483),
+(11, 10, 2, 7777),
+(12, 13, 3, 398),
+(13, 7, 2, 8473),
+(14, 1, 2, 2147483647);
 
 -- --------------------------------------------------------
 
@@ -189,11 +207,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`, `userPicture`, `userAdmin`) VALUES
-(1, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com', NULL, b'1'),
+(1, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com', 'test.jpg', b'1'),
 (2, 'test1', '5a105e8b9d40e1329780d62ea2265d8a', 'test1@test.com', NULL, b'0'),
 (3, 'godo', 'e8b554a5700433e00c24dc9df0b079de', 'godo@istvan.com', NULL, b'0'),
 (4, 'lol', '6f4a9ff0ca341363419a66083c626c00', 'lol@asd.com', NULL, b'0'),
-(5, 'Borderheart', 'cab8c6b15a392c3d1c85ef0dc29e6442', 'Borderheart@email.com', NULL, b'0'),
+(5, 'Borderheart', 'cab8c6b15a392c3d1c85ef0dc29e6442', 'Borderheart@email.com', 'download.jpg', b'0'),
 (6, 'Bulletreign', '729722e19b83eb8f62cfe7806fea9cb2', 'bulletreign@bruh.com', NULL, b'0'),
 (7, 'Blockfire', '417f2ef09dbd8bfaef894325ca3586f2', 'blockfire54@gmail.com', NULL, b'0'),
 (8, 'Bladenite', '4e7eddc9036d7af5eaf70a03d08996cc', 'BladenIte@generic.com', NULL, b'0'),
@@ -266,7 +284,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `ahighscores`
 --
 ALTER TABLE `ahighscores`
-  MODIFY `aScoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `aScoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT a táblához `games`
@@ -284,7 +302,7 @@ ALTER TABLE `minrequirements`
 -- AUTO_INCREMENT a táblához `nhighscores`
 --
 ALTER TABLE `nhighscores`
-  MODIFY `nScoreId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `nScoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT a táblához `owngames`
