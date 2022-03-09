@@ -39,7 +39,7 @@ require 'inc/inc_admin.php  ' ?>
                 </table>
               </div>
               <div class="col-md-12">
-                <form action="inc/inc_scoresub.php" method="post">
+                <form action="inc/inc_scoreapprove.php" method="post">
                 <div class="container text-center">
                 <select name="scoreSelect" id="scoreSelect" class="form-select">
                 <?php
@@ -48,9 +48,9 @@ require 'inc/inc_admin.php  ' ?>
                   }
                   ?>
                 </select><br>
-                <button type="submit" name="scoreSubmit" class="btn btn-success mx-1">Approve Score</button>
+                <button type="submit" name="scoreSubmit" class="btn btn-success">Approve Score</button>
                 
-                <button type="submit" name="deleteSubmit" class="btn btn-danger mx-1">Delete Score</button>
+                <button type="submit" name="deleteSubmit" class="btn btn-danger">Delete Score</button>
                 </div>
                 </form>
               </div>
