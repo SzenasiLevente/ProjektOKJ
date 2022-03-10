@@ -5,7 +5,7 @@ require 'inc/inc_admin.php  ' ?>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h1 text-white ">Admin</h1>
         </div>
-        <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+        <div class="d-flex justify-content-between flex-wrap text-white main-size">
     <div class="container-fluid">
         <div class="card bg-dark my-3">
         <div class="row">

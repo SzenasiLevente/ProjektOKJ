@@ -7,7 +7,7 @@
         <h1 class="h1 text-white ">Home</h1>
       </div>
 
-      <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+      <div class="d-flex justify-content-between flex-wrap text-white main-size">
       <div class="container-fluid">
         <div class="row">
         <div class="col-lg-6">

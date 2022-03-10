@@ -8,7 +8,7 @@ require 'inc/inc_gamequery.php';
         <h1 class="h1 text-white "><?php echo "".$_SESSION['gameName']." " ?></h1>
       </div>
 
-      <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+      <div class="d-flex justify-content-between flex-wrap text-white main-size">
       <div class="container-fluid">
       <div class="card bg-dark my-3">
     <div class="row">
@@ -39,9 +39,9 @@ require 'inc/inc_gamequery.php';
       <?php
             if (isset($_SESSION['username'])) {
              echo ' 
-      <div class="text-center pb-4 mt-1">
+      <div class="text-center pb-4 mt-2">
       <form action="inc/inc_gamedown.php" method="post">
-      <button type="submit" name="gameSubmit" class="btn btn-light mx-auto" style="width:35%;">Get the game here</button>
+      <button type="submit" name="gameSubmit" class="btn btn-light mx-auto game-button">Get the game here</button>
       </form>
 
       </div>';

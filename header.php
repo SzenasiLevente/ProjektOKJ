@@ -71,7 +71,7 @@ require 'inc/inc_headerquery.php';
             <a class="link-secondary" href="#">
               <span data-feather="plus-circle"></span>
             </a>
-          </h6>';}
+          </h6>';
           if ($valuebattlefield != NULL){
               echo'
             <li class="nav-item px-3 py-2">
@@ -96,6 +96,13 @@ require 'inc/inc_headerquery.php';
               <input type="hidden" name="gamehidden" value="Ratman">
             </form>
             </li>';}
+          if($valuerat == NULL && $valueloz == NULL && $valuebattlefield == NULL){
+            echo'
+            <li class="nav-item px-3 pt-2">
+            <p class="text-white">You currently do not own any games.</p>
+            </li>';
+          }
+        }
             ?>
           </ul>
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

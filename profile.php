@@ -8,7 +8,7 @@ require 'inc/inc_profquery.php';
     <h1 class="h1 text-white "><?php echo '' . $_SESSION["username"] . ' Users Profile' ?></h1>
   </div>
 
-  <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+  <div class="d-flex justify-content-between flex-wrap text-white main-size">
     <div class="container-fluid">
       <div class="card bg-dark my-3">
         <div class="row">

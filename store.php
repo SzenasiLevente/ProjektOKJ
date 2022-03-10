@@ -8,7 +8,7 @@ $resultgame = mysqli_query($connection, $sqlgame);
         <h1 class="h1 text-white ">Pick games!</h1>
       </div>
 
-      <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+      <div class="d-flex justify-content-between flex-wrap text-white main-size">
       <div class="container-fluid">
         <div class="row">
 

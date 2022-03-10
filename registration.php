@@ -7,7 +7,7 @@ require "header.php"
         <h1 class="h1 text-white ">Home</h1>
       </div>
 
-      <div class="d-flex justify-content-between flex-wrap text-white" style="font-size: 1.5rem;">
+      <div class="d-flex justify-content-between flex-wrap text-white main-size">
       <div class="container-fluid">
         <div class="row">
         <div class="col-lg-2"></div>
@@ -17,7 +17,7 @@ require "header.php"
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-          <div class="card bg-dark text-white my-4" style="border-radius: 10px;">
+          <div class="card bg-dark text-white my-4 reg-border">
             <div class="card-body p-5">
 
               <form action="inc/inc_registration.php" method="post">

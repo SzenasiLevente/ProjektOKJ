@@ -215,3 +215,15 @@ img {
     color: white !important;
     font-size: 0.9rem;
 }
+
+.main-size {
+    font-size: 1.5rem;
+}
+
+.game-button {
+    width: 35%;
+}
+
+.reg-border {
+    border-radius: 10px;
+}
