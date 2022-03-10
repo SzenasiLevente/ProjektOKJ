@@ -132,14 +132,6 @@ require 'inc/inc_headerquery.php';
             </li>
             <?php
             if (isset($_SESSION['username'])) {
-              $admin = 'SELECT `users`.`userAdmin`
-              FROM `users`
-              WHERE `users`.`userName` = "'.$_SESSION['username'].'" LIMIT 1';
-
-              $adminquery = mysqli_query($connection,$admin);
-              $adminresult = mysqli_fetch_assoc($adminquery);
-              $adminvalue = $adminresult["userAdmin"];
-
               if ($adminvalue == 1){
                 echo '
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

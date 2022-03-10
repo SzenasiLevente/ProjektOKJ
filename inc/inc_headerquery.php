@@ -3,6 +3,14 @@ require "inc_connection.php";
 
 if(isset($_SESSION["username"])){
 
+    $admin = 'SELECT `users`.`userAdmin`
+    FROM `users`
+    WHERE `users`.`userName` = "'.$_SESSION['username'].'" LIMIT 1';
+
+    $adminquery = mysqli_query($connection,$admin);
+    $adminresult = mysqli_fetch_assoc($adminquery);
+    $adminvalue = $adminresult["userAdmin"];
+
 $battlefieldquery = 'SELECT `owngames`.`ownId`
 FROM `users`
     LEFT JOIN `owngames` ON `owngames`.`ownUId` = `users`.`userId`
