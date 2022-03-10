@@ -13,8 +13,7 @@ $scores = 'SELECT `ahighscores`.`aScorePoints`, `users`.`userId`, `games`.`gameN
 FROM `users`
     LEFT JOIN `ahighscores` ON `ahighscores`.`aUId` = `users`.`userId`
     LEFT JOIN `games` ON `ahighscores`.`aGId` = `games`.`gameId`
-    WHERE `users`.`userName` ="'.$_SESSION["username"].'"
-    LIMIT 5';
+    WHERE `users`.`userName` ="'.$_SESSION["username"].'"';
 
 $resultscores = mysqli_query($connection,$scores);
 

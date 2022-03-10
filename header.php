@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'inc/inc_connection.php';
+require 'inc/inc_headerquery.php';
 ?>
 
 <!doctype html>
@@ -68,24 +69,32 @@ require 'inc/inc_connection.php';
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
+          <?php
+          if ($valuebattlefield != NULL){
+              echo'
             <li class="nav-item px-3 py-2">
           <form action="inc/inc_gamename.php" method="post">
               <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Call of Battlefield</button>
               <input type="hidden" name="gamehidden" value="Call of Battlefield">
             </form>
-            </li>
+            </li>';}
+          if ($valueloz != NULL){
+            echo'
             <li class="nav-item px-3">
             <form action="inc/inc_gamename.php" method="post">
               <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Legend of Zrolda</button>
               <input type="hidden" name="gamehidden" value="Legend of Zrolda">
             </form>
-            </li>
+            </li>';}
+          if ($valuerat != NULL){
+            echo'
             <li class="nav-item px-3 pt-2">
             <form action="inc/inc_gamename.php" method="post">
               <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Ratman</button>
               <input type="hidden" name="gamehidden" value="Ratman">
             </form>
-            </li>
+            </li>';}
+            ?>
           </ul>
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Navigation</span>
