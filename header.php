@@ -69,19 +69,19 @@ require 'inc/inc_connection.php';
             </a>
           </h6>
             <li class="nav-item px-3 py-2">
-          <form action="game.php" method="post">
+          <form action="inc/inc_gamename.php" method="post">
               <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Call of Battlefield</button>
               <input type="hidden" name="gamehidden" value="Call of Battlefield">
             </form>
             </li>
             <li class="nav-item px-3">
-            <form action="game.php" method="post">
+            <form action="inc/inc_gamename.php" method="post">
               <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Legend of Zrolda</button>
               <input type="hidden" name="gamehidden" value="Legend of Zrolda">
             </form>
             </li>
             <li class="nav-item px-3 pt-2">
-            <form action="game.php" method="post">
+            <form action="inc/inc_gamename.php" method="post">
               <button class="btn headergame" type="submit" name="submit"><i class="bi bi-controller"></i> Ratman</button>
               <input type="hidden" name="gamehidden" value="Ratman">
             </form>
