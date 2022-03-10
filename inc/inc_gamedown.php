@@ -12,12 +12,12 @@ if(isset($_POST['gameSubmit'])){
         LEFT JOIN `games` ON `owngames`.`ownGId` = `games`.`gameId`
     WHERE `users`.`userName` = "'.$_SESSION['username'].'" AND `games`.`gameName` = "'.$_SESSION['gameName'].'"';
 
-    $resultup = mysqli_fetch_assoc($upquery);
-    $valueup = $resultup["ownId"];
-
     $downresult = mysqli_query($connection,$downquery);
 
-    if($valueup != NULL)
+    $resultdown = mysqli_fetch_assoc($downresult);
+    $valuedown = $resultdown["ownId"];
+
+    if($valuedown != NULL)
     {
         header("Location: ../game.php?error=gamealreadyowned");
     }
