@@ -20,8 +20,12 @@ require 'inc/inc_profquery.php';
                 <ul class="mx-5 my-5">
                   <?php
                   while ($row = mysqli_fetch_assoc($resultgames)) {
+                    if($row['gameName'] != NULL){
                     echo '
-                    <li>' . $row['gameName'] . '</li>';
+                    <li>' . $row['gameName'] . '</li>';}
+                    else{
+                      echo '
+                      <li>You currently do not own any games.</li>';}
                   }
                   ?>
                 </ul>
@@ -69,13 +73,21 @@ require 'inc/inc_profquery.php';
                     <?php
                     $place = 0;
                     while ($row = mysqli_fetch_assoc($resultscores)) {
+                      if ($row["aScorePoints"] != NULL) {
                       echo '
                         <tr>
                           <th scope="row">' . strval($place = $place + 1) . '</th>
                           <td>' . $row["gameName"] . '</td>
                           <td>' . $row["aScorePoints"] . '</td>
-                        </tr>';
-                    }
+                        </tr>';}
+                        else{
+                          echo'                        
+                          <tr>
+                          <th scope="row">0</th>
+                          <td>No scores recorded</td>
+                          <td>0</td>
+                        </tr>';}
+                        }
                     ?>
                   </tbody>
                 </table>

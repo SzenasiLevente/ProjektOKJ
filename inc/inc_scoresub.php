@@ -12,6 +12,9 @@ if (isset($_POST['scoreSubmit'])) {
     if (empty($scoreInput)) {
         header("Location: ../profile.php?error=emptyField");
     }
+    if (empty($gameInput)) {
+        header("Location: ../profile.php?error=nogamesFound");
+    }
     if ($scoreInput == 0){
         header("Location: ../profile.php?error=cantbeNull");
     }
