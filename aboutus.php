@@ -9,17 +9,27 @@
       <div class="container-fluid">
         <div class="row">
         <div class="col-lg-6">
-        <h3>What we do</h3>
-        <p class="align-justified">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deleniti quod ad esse optio quae ducimus! Fugit voluptatum velit labore at minima id suscipit autem delectus? Velit temporibus natus, magni dolore doloremque repellendus sunt inventore commodi porro, consequatur cumque doloribus sequi ex nisi autem. Dolorem error deserunt consequatur expedita esse!</p>
+        <h3>Who we are</h3>
+        <p class="align-justified">Our company was founded in 1981 by former Microsoft employees Greg Nicoleson and Mike Thomas. Our debut product, the arcade game Ratman (1982), was a critical and commercial success; with its realism, written sequences and seamless storytelling, it had a lasting influence on the arcade genre. Followed by Legend of Zrolda in 1992, with advanced physics systems and an increased focus on story and characters, Legend of Zrolda received critical acclaim and sold 12 million copies by 2001. Nicoleson sadly left in 2005. In 2007, our company released the multiplayer online battlefield game Call of Battlefield. In 2021, we have decided to launch Vapour to keep our older games from becoming abandonware.</p>
         </div>
         <div class="col-lg-6">
         <h3>Why we do it?</h3>
-        <p class="align-justified">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque suscipit sunt cupiditate delectus? Praesentium animi dignissimos distinctio ipsam. Non quas vero modi libero rem praesentium enim accusamus, nesciunt maiores facilis nobis vitae sapiente ut voluptate. Iste impedit molestiae a similique optio dolore veniam eius nostrum laborum vel, corrupti quae. Delectus.</p>
+        <p class="align-justified">In our rapidly moving world, sadly games are bound to be unavaliable over time.<br>To counter this issue we have decided to make our older games avaliable to everyone for completely free since we would not really get any more profit from them anyways.<br>This solution pleases both us and our dearly valued fanbase. They get to play with the games they grew up with, and we get to enjoy the thought that our games still live on.</p>
         </div>
         <div class="col-lg-12">
-        <h3 class="text-center">Meet the dev team</h3>
-        <p class="text-center align-justified">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto ab doloribus. Ratione explicabo facere atque repudiandae sit saepe officia reprehenderit modi mollitia non recusandae accusamus, corrupti quibusdam quidem placeat architecto nobis, nihil quas nesciunt natus sunt expedita. Natus, in, sint, enim quaerat culpa aliquam repellat magni dicta vitae recusandae eum. Nostrum commodi, id vel reiciendis quidem saepe numquam quae. Animi ipsa ratione dignissimos similique?</p>
-        <img src="IMG/placeholder.png" alt="placeholder.png" class="rounded mx-auto d-block img-fluid img-thumbnail my-3">
+        <h3 class="text-center">Our company's structure</h3>
+        <p class="text-center align-justified pb-3">Initially, we used a hierarchical structure more typical of other development companies, driven by the nature of physical game releases through publishers that required tasks to be completed by deadlines. However, later on, it was found that the hierarchical structure was hampering progress. After completing Legend of Zrolda, we switched to a flat organization; outside of executives, we have no bosses, and use an open allocation system. This approach allows employees to work on whatever interests them, but requires them to take ownership of their product and mistakes they can make.</p>
+
+        <div class="col-lg-12 border-top text-center">
+          <div id="contact">
+            <ul>
+              <li>Contact us:</li>
+              <li>Phone number: +1-202-555-0174</li>
+              <li>E-mail address: vapour@support.com</li>
+              <li>Address: Budapest, Állatkerti krt. 12a, 1146</li>
+            </ul>
+          </div>
+        </div>
       </div>
       </div>
         </div>

@@ -227,3 +227,12 @@ img {
 .reg-border {
     border-radius: 10px;
 }
+
+#contact ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+#contact li:not(:last-child) {
+    margin-right: 15px;
+}
