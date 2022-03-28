@@ -8,11 +8,5 @@ https://store.steampowered.com/app/394160/ARCADE_GAME_SERIES_PACMAN/
 
 https://codepen.io/fernstedt/pen/mxGzor
 
-https://getbootstrap.com/docs/5.0/examples/sticky-footer/
-
 game photos
 https://www.adobe.com/express/create/logo
-
-Library
-Photo by <a href="https://unsplash.com/@ryunosuke_kikuno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ryunosuke Kikuno</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
