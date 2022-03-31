@@ -26,7 +26,7 @@
               <li>Contact us:</li>
               <li>Phone number: +1-202-555-0174</li>
               <li>E-mail address: vapour@support.com</li>
-              <li>Address: Budapest, Állatkerti krt. 12a, 1146</li>
+              <li>Address: Hungary, Budapest, Teréz krt. 55, 1062</li>
             </ul>
           </div>
         </div>
